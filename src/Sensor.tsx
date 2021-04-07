@@ -99,6 +99,9 @@ export const Sensor: React.FC<Props> = (props: Props) => {
               <a
                 className={css`
                   color: ${sensor.fontColor};
+                  &:hover {
+                    color: ${sensor.fontColor};
+                  }
                 `}
                 href={link || '#'}
               >
@@ -141,9 +144,11 @@ const getStyles = stylesFactory(() => {
       float: left;
     `,
     name: css`
-      font-size: 0.5em;
+      text-align: center;
     `,
-    value: css``,
+    value: css`
+      text-align: center;
+    `,
     blink: css`
       animation: ${blink} 1s linear infinite;
     `,
